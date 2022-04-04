@@ -1,18 +1,22 @@
-import './AnimalCard.css'
-import Button from './Button';
 import React from 'react';
-
-//src={`https://source.unsplash.com/1600x900/?${props.title}`}
-//
-
+import "./AnimalCard.css"
 const AnimalCard = (props) => {
-    return (
-        <div className="card">      
-            <img class="animalImage" src={`https://source.unsplash.com/1600x900/?${props.name}`}/> 
-           <h3 class="title">{props.name}</h3>
-           <Button/>
-        </div>
-    );
-};  
+  return (
+    <div className="card">
+      <img
+        src={`https://source.unsplash.com/500x400/?${props.name}`}
+        alt={props.name}
+      />
+      <button className="remove" onClick={props.remove}>
+        X
+      </button>
+      <h2>{props.name}</h2>
+      <div className="likes_container">
+        <p className="likes">❤ {props.like}</p>
+        <button onClick={props.add}> Add like </button>
+      </div>
+    </div>
+  );
+};
 
 export default AnimalCard;

@@ -1,4 +1,6 @@
-*{
-  background-color: darkcyan;
-}
 
+.animalsList {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: darkcyan
+}
