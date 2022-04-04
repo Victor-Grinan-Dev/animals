@@ -6,6 +6,16 @@
     border-radius: 10px;
   }
 
+.animalImage{
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
 .cardFooter{
     background-color: burlywood;
 } 
+
+.title {
+  background-color: rgba(0, 0, 0, 0);
+  color: aliceblue;
+}

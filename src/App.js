@@ -1,11 +1,15 @@
 import './App.css';
-
+import { animals } from './database'; 
 import  AnimalCard  from "./AnimalCard";
 
 function App() {
+  {console.log(animals)}
   return (
     <div className="App">
-        <AnimalCard/>
+      hello
+      {animals.map(animal => (
+      <AnimalCard name={animal.name}/>))
+      } 
     </div>
   );
 }
