@@ -1,18 +1,22 @@
 .card{
-    background-color: rgb(8, 8, 8);
-    height: 400px;
-    width: 300;
-    margin: 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    box-shadow: 5px 5px 10px black;
-    max-width: 350px;
-    min-width: 300;
-  }
+  background-color: rgb(8, 8, 8);
+  height: 400px;
+  width: 300;
+  margin: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 20px 20px 20px black;
+  max-width: 350px;
+  min-width: 300;
+}
 
-.close{
+.animalImage{
+  border-radius: 10px 10px 0 0;
+}
+
+.remove{
   position: absolute;
   top: 5px;
   left: 85%;
@@ -21,12 +25,40 @@
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  align-items: center;}
-
-.animalImage{
-  width: 100%;
-  border-radius: 10px 10px 0 0;
+  align-items: center;
+  border: none;
 }
+
+
+
+.likes_container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color:beige
+}
+
+.likes {
+  margin-right: 20px;
+}  
+
+.title {
+  color: aliceblue;
+}
+
+.cardFooter{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+} 
+
+
+/*
+
+
+
 
 .title, .card div, .card p {
   background-color: rgba(0, 0, 0, 0);
@@ -38,13 +70,9 @@
 display: inline-block;
 }
 
-.card .cardFooter{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-} 
+.card 
 
 .likes {
-  margin-right: 20px;
+  
 }
+*/
