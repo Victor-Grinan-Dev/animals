@@ -6,6 +6,7 @@ import AnimalCard from './AnimalCard';
 class App extends Component {
   state = {
     animals: animals,
+    search:'',
   };
 
   removeHandler = (name) => {
@@ -33,10 +34,23 @@ class App extends Component {
     console.log(this.state);
   };
 
+  searchHandler = (e) => {
+    this.setState({ search: e.target.value });
+  }
+
   render() {
+
+    const animalFilter = animals.filter(animal => {
+      return animal.name.toLowerCase().includes(this.state.search.toLowerCase())
+    });
+
     return (
-      <div className="animalsList">
-        {this.state.animals.map((animal) => (
+      <main >
+        <input type="text" onChange={this.searchHandler}/>
+        <h3>{this.state.animals.length} animal cards in display</h3>
+        <div className="animalsList">
+        
+        {animalFilter.map((animal) => (
           <AnimalCard
             key={animal.name}
             name={animal.name}
@@ -47,6 +61,7 @@ class App extends Component {
           />
         ))}
       </div>
+      </main>
     );
   }
 }
